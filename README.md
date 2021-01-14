@@ -74,7 +74,9 @@ CREATE TABLE "tab" (
 )
 
 Create 1 DB index to enhance query performance
+```sql
 CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 	"lineItem/UsageAccountId",
 	"product/ProductName"
 )
+```
