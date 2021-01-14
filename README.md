@@ -7,6 +7,7 @@
      | ------ | -------- |
      | usageaccountid | true |
     - Output 
+     
      ```JSON
        {
         "{product/productname_A}": "sum(lineitem/unblendedcost)",
@@ -14,5 +15,8 @@
         ...
         }
         ```
+
+   - API URL
+   
 2. Get daily lineItem/UsageAmount grouping by product/productname
 , API URLs, and DB schema
