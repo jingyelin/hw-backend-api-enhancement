@@ -58,8 +58,8 @@
       http://127.0.0.1:8000/app/usage_amount/?usageaccountid=484234319610
 
 ## DB schema
-Create 1 table, table name: tab
-
+1. Create 1 table, table name: tab
+```sql
 CREATE TABLE "tab" (
 	"field1"	INTEGER NOT NULL,
 	"bill/PayerAccountId"	TEXT,
@@ -72,8 +72,8 @@ CREATE TABLE "tab" (
 	"product/ProductName"	TEXT,
 	PRIMARY KEY("field1")
 )
-
-Create 1 DB index to enhance query performance
+```
+2. Create 1 DB index to enhance query performance
 ```sql
 CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 	"lineItem/UsageAccountId",
