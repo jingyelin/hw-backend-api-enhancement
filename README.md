@@ -3,8 +3,10 @@
 ## API spec
 1. Get lineItem/UnblendedCost grouping by product/productname
    - Method 
+      
       GET
    - path
+     
      /app/unblended_cost
    - Input
      | Column | Required |
