@@ -22,6 +22,7 @@
 
    - API URL
       http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=AccountID
+      
       Example:
       http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=484234319610
 
@@ -54,6 +55,7 @@
       
     - API URL
       http://127.0.0.1:8000/app/usage_amount/?usageaccountid=AccountID
+      
       Example:
       http://127.0.0.1:8000/app/usage_amount/?usageaccountid=484234319610
 
