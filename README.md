@@ -85,6 +85,7 @@ CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 2. 在統計prodname的每日usageAmount
 	1. 將查詢結果依 prodname和usagestartdate排序
 	2. for loop 查詢結果來建立兩層的 dictionary
+	
 		第一層的dictionary 
 		- key 是 prodname
 		- value 是 第二層的dictionary
