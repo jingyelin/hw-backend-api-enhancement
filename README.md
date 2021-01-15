@@ -5,9 +5,12 @@
    - Method:  GET
    - path:  /app/unblended_cost
    - Input
-     | Column | Required |
-     | ------ | -------- |
-     | usageaccountid | true |
+     | Column | Required | Type |Note
+     | ------ | -------- | -------- |
+     | usageaccountid | true | String | lineitem/usageaccountid	|
+     | page | false | int |page要為數字，可以不填,每一頁最多顯示5筆資料|
+如果傳入非數字，系統會回傳第一頁
+如果沒傳入值，系統會回傳第一頁 
     - Output 
      
      ```JSON
@@ -19,10 +22,10 @@
       ```
 
    - API URL
-      http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=AccountID
+      http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=AccountID&page=PageNumber
       
       Example:
-      http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=484234319610
+      http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=484234319610&page=2
 
 2. Get daily lineItem/UsageAmount grouping by product/productname
    - Method: GET
