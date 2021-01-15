@@ -8,9 +8,8 @@
      | Column | Required | Type | Note |
      | ------ | -------- | -------- | -------- |
      | usageaccountid | true | String | lineitem/usageaccountid	|
-     | page | false | int | page要為數字，可以不填,每一頁最多顯示5筆資料 |
-如果傳入非數字，系統會回傳第一頁
-如果沒傳入值，系統會回傳第一頁 
+     | page | false | int | page number  |
+	page要為數字，可以不填,每一頁最多顯示5筆資料, 如果傳入非數字，系統會回傳第一頁, 如果沒傳入值，系統會回傳第一頁
     - Output 
      
      ```JSON
