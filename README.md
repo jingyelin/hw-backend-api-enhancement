@@ -2,12 +2,8 @@
 
 ## API spec
 1. Get lineItem/UnblendedCost grouping by product/productname
-   - Method 
-      
-      GET
-   - path
-     
-     /app/unblended_cost
+   - Method:  GET
+   - path:  /app/unblended_cost
    - Input
      | Column | Required |
      | ------ | -------- |
@@ -29,10 +25,8 @@
       http://127.0.0.1:8000/app/unblended_cost/?usageaccountid=484234319610
 
 2. Get daily lineItem/UsageAmount grouping by product/productname
-   - Method 
-      GET
-   - path
-     /app/usage_amount
+   - Method: GET
+   - path:  /app/usage_amount
    - Input
      | Column | Required |
      | ------ | -------- |
@@ -84,3 +78,12 @@ CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 	"product/ProductName"
 )
 ```
+## Performance
+在統計prodname的每日usageAmount
+1. 將查詢結果依 prodname和usagestartdate排序
+2. for loop 查詢結果來建立兩層的 dictionary
+	dictionary第一層的key 是prodname
+	value是第二層的dictionary
+	第二層dictionary 記錄 此prodname 每日的usageAmount總量
+	key 是日期
+	value 是 每日的usageAmount總量
