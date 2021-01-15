@@ -5,7 +5,7 @@
    - Method:  GET
    - path:  /app/unblended_cost
    - Input
-     | Column | Required | Type |Note|
+     | Column | Required | Type | Note |
      | ------ | -------- | -------- |
      | usageaccountid | true | String | lineitem/usageaccountid	|
      | page | false | int |page要為數字，可以不填,每一頁最多顯示5筆資料|
