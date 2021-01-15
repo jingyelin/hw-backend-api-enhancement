@@ -79,7 +79,10 @@ CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 )
 ```
 ## Performance
-在統計prodname的每日usageAmount
+1. 在統計prodname的 unblendedCost
+在db查詢時直接 group by  prodname 再用sum函數來統計unblendedCost
+
+2. 在統計prodname的每日usageAmount
 1. 將查詢結果依 prodname和usagestartdate排序
 2. for loop 查詢結果來建立兩層的 dictionary
 	第一層的dictionary 
