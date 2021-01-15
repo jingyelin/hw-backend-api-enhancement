@@ -83,12 +83,12 @@ CREATE INDEX "tab_usage_account_id_product_name" ON "tab" (
 在db查詢時直接 group by  prodname 再用sum函數來統計unblendedCost
 
 2. 在統計prodname的每日usageAmount
-1. 將查詢結果依 prodname和usagestartdate排序
-2. for loop 查詢結果來建立兩層的 dictionary
-	第一層的dictionary 
-	- key 是 prodname
-	- value 是 第二層的dictionary
+	1. 將查詢結果依 prodname和usagestartdate排序
+	2. for loop 查詢結果來建立兩層的 dictionary
+		第一層的dictionary 
+		- key 是 prodname
+		- value 是 第二層的dictionary
 	
-	第二層dictionary 記錄 此prodname 每日的usageAmount總量
-	- key 是日期
-	- value 是 每日的usageAmount總量
+		第二層dictionary 記錄 此prodname 每日的usageAmount總量
+		- key 是日期
+		- value 是 每日的usageAmount總量
